@@ -57,8 +57,9 @@ passo, e a `pr5-nomes-com-igual` só reprova no SonarQube.
 
 ## Refazer no seu fork
 
-1. Faça um fork deste repositório. Na aba *Actions* do fork, habilite os
-   workflows.
+1. Faça um fork deste repositório, desmarcando *Copy the `main` branch only*,
+   para que as cinco branches venham junto. Na aba *Actions* do fork, habilite
+   os workflows.
 2. Abra uma pull request de uma das branches para a `main` do **seu** fork e
    acompanhe a execução na aba *Checks* da PR.
 3. O passo do SonarQube é pulado enquanto o fork não tiver o secret
