@@ -24,4 +24,23 @@ public class Jokenpo {
             retorno = -1;
         return retorno;
     }
+
+    /**
+     * Devolve o nome de uma escolha, para exibir o resultado do jogo.
+     *
+     * @param escolha 1 (papel), 2 (pedra) ou 3 (tesoura)
+     * @return o nome da escolha, ou "invalida" se ela nao existir
+     */
+    public String nome(int escolha) {
+        if (escolha == 1) {
+            return "papel";
+        }
+        if (escolha == 2) {
+            return "pedra";
+        }
+        if (escolha == 3) {
+            return "tesoura";
+        }
+        return "invalida";
+    }
 }
