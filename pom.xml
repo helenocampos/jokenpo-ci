@@ -44,6 +44,17 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.5.2</version>
       </plugin>
+      <!-- Gate de estilo. "mvn checkstyle:check" falha se o codigo violar
+           alguma regra de checkstyle.xml. -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>3.6.0</version>
+        <configuration>
+          <configLocation>checkstyle.xml</configLocation>
+          <consoleOutput>true</consoleOutput>
+        </configuration>
+      </plugin>
       <!-- Gate de cobertura. O relatorio sai na fase test, e a regra fica na
            configuracao do plugin para que "mvn jacoco:check" a encontre: cada
            classe precisa de ao menos 80% dos branches cobertos. -->
