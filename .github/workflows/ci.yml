@@ -23,6 +23,9 @@ jobs:
           java-version: '17'
           cache: maven
 
+      - name: Gate de estilo (Checkstyle)
+        run: mvn -B checkstyle:check
+
       - name: Compilar e testar
         run: mvn -B test
 
