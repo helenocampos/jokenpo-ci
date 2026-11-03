@@ -24,4 +24,28 @@ public class Jokenpo {
             retorno = -1;
         return retorno;
     }
+
+    /**
+     * Mesmo jogo, com as escolhas pelo nome: "papel", "pedra" ou "tesoura".
+     *
+     * @param jogador1 nome da escolha do jogador 1
+     * @param jogador2 nome da escolha do jogador 2
+     * @return o mesmo que {@link #jogar(int, int)}
+     */
+    public int jogar(String jogador1, String jogador2) {
+        return jogar(codigo(jogador1), codigo(jogador2));
+    }
+
+    private int codigo(String escolha) {
+        if (escolha == "papel") {
+            return 1;
+        }
+        if (escolha == "pedra") {
+            return 2;
+        }
+        if (escolha == "tesoura") {
+            return 3;
+        }
+        return -1;
+    }
 }

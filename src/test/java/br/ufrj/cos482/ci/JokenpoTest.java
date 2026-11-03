@@ -61,4 +61,29 @@ class JokenpoTest {
     void jogador2Zero() {
         assertEquals(-1, jokenpo.jogar(1, 0));
     }
+
+    @Test
+    void papelGanhaDePedraPeloNome() {
+        assertEquals(1, jokenpo.jogar("papel", "pedra"));
+    }
+
+    @Test
+    void pedraPerdeParaPapelPeloNome() {
+        assertEquals(2, jokenpo.jogar("pedra", "papel"));
+    }
+
+    @Test
+    void tesouraGanhaDePapelPeloNome() {
+        assertEquals(1, jokenpo.jogar("tesoura", "papel"));
+    }
+
+    @Test
+    void empatePeloNome() {
+        assertEquals(0, jokenpo.jogar("tesoura", "tesoura"));
+    }
+
+    @Test
+    void nomeInvalido() {
+        assertEquals(-1, jokenpo.jogar("lagarto", "pedra"));
+    }
 }
