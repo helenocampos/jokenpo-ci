@@ -66,4 +66,5 @@ passo, e a `pr5-nomes-com-igual` só reprova no SonarQube.
    GitHub, importe o fork, desligue a *Automatic Analysis* em
    *Administration > Analysis Method*, gere um token e cadastre-o em
    *Settings > Secrets and variables > Actions* do fork. Depois, troque
-   `ORGANIZACAO` no `pom.xml` pela chave da sua organização no SonarQube Cloud.
+   `helenocampos` no `pom.xml`, em `sonar.organization` e no começo de
+   `sonar.projectKey`, pela chave da sua organização no SonarQube Cloud.
